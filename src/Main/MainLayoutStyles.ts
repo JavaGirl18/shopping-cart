@@ -6,12 +6,36 @@ export const Main = styled.div`
   }
 
   .search {
-      margin-left: 25px;
+      margin-left: 30px;
   }
 
-@media only screen and (max-width: 600px) {
-  .ui.icon.input {
-    width 220px;
+  .xyz {
+    padding: 20px;
+    background-color: black;
+    color: white;
   }
-}
+
+  .about-us {
+    margin-right: 40px;
+  }
+
+  
+  .about-us:hover {
+    background-color: lightgrey;
+    color: black;
+  }
+  
+  .shop:hover {
+    background-color: lightgrey;
+    color: black;
+  }
+  
+
+
+  @media only screen and (max-width: 600px) {
+    .ui.icon.input {
+      width 220px;
+    }
+  
+
 `
