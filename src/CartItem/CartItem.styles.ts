@@ -1,25 +1,21 @@
 import styled from 'styled-components'
 
 export const Wrapper = styled.div`
+  img {
+    object-fit: cover;
+    margin-left: 20px;
+  }
 
-display: flex;
-justify-content: space-between
-font-family: Arial, Helvetica, sans-serif
-border-bottom: 1px solid lightblue;
-padding-bottom: 20px;
+  p {
+    font-weight: bold;
+    word-wrap: break-word;
+  }
+  .table {
+    minwidth: 650;
+    margin-bottom: 15px;
+  }
 
-div {
-  flex: 1;
-}
-
-.information, .buttons {
-  display: flex;
-  justify-content: space-between
-}
-
-img {
-  max-width: 80px;
-  object-fit: cover;
-  margin- left: 40px
-}
+  .buttons {
+    max-height: 15px;
+  }
 `

@@ -2,8 +2,10 @@ import CartItem from '../CartItem/CartItem'
 
 import { Wrapper } from './Cart.styles'
 
-import { CartItemType } from '../App'
+import { CartItemType } from '../Types/CartItemTypes'
 
+import Button from '@material-ui/core/Button'
+import Grid from '@material-ui/core/Grid'
 type Props = {
   cartItems: CartItemType[]
   addToCart: (clickItem: CartItemType) => void
@@ -16,17 +18,31 @@ const Cart: React.FC<Props> = ({ cartItems, addToCart, removeFromCart }) => {
 
   return (
     <Wrapper>
-      <h2>Your Shopping Cart</h2>
-      {cartItems.length === 0 ? <p>No items in the cart</p> : null}
-      {cartItems.map((item) => (
-        <CartItem
-          key={item.id}
-          item={item}
-          addToCart={addToCart}
-          removeFromCart={removeFromCart}
-        />
-      ))}
-      <h2>Total: ${calculateTotal(cartItems).toFixed(2)}</h2>
+      <div>
+        <h2>Your Shopping Cart</h2>
+        {cartItems.length === 0 ? <p>No items in the cart</p> : null}
+        {cartItems.map((item) => (
+          <CartItem
+            key={item.id}
+            item={item}
+            addToCart={addToCart}
+            removeFromCart={removeFromCart}
+          />
+        ))}
+        <div className='total'>
+          <p> Total: </p>
+          <p>${calculateTotal(cartItems).toFixed(2)}</p>
+        </div>
+        <Button
+          component='div'
+          className='checkout'
+          disableElevation
+          variant='outlined'
+          onClick={() => console.log('checking out')}
+        >
+          Checkout
+        </Button>
+      </div>
     </Wrapper>
   )
 }
