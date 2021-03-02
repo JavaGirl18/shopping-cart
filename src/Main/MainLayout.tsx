@@ -8,45 +8,40 @@ import Badge from '@material-ui/core/Badge'
 const MainLayout = () => {
   return (
     <Main>
-      <Grid style={{ justifyContent: 'center', alignContent: 'center' }}>
-        <Grid.Column className='xyz'>
-          <Menu horizontal style={{ height: 50 }}>
-            <Dropdown item text='About Us'>
-              <Dropdown.Menu>
-                <Dropdown.Item>Our Story</Dropdown.Item>
-                <Dropdown.Item>Get Involved</Dropdown.Item>
-                <Dropdown.Item>More</Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
-            <Menu.Menu>
-              <Dropdown item text='Shop'>
-                <Dropdown.Menu>
-                  <Dropdown.Item>Our Story</Dropdown.Item>
-                  <Dropdown.Item>Get Involved</Dropdown.Item>
-                  <Dropdown.Item>More</Dropdown.Item>
-                </Dropdown.Menu>
-              </Dropdown>
-            </Menu.Menu>
-            <Menu.Menu>
-              <Grid>
-                <Grid.Column className='xyz'>
-                  <Search />
-                </Grid.Column>
-                <Grid.Column computer={6} floated='right' mobile='4'>
-                  <Icon name='instagram' size='big' />
-                  <Icon name='facebook' size='big' />
-                  <Icon name='twitter' size='big' />
-                  {/* </Grid.Column>
-                <Grid.Column mobile='2'> */}
-                  <button>
-                    <Badge color='error'>
-                      <AddShoppingCartIcon />
-                    </Badge>
-                  </button>
-                </Grid.Column>
-              </Grid>
-            </Menu.Menu>
-          </Menu>
+      <Grid>
+        <Grid.Column className='xyz' computer={4}>
+          <Dropdown item text='About Us'>
+            <Dropdown.Menu>
+              <Dropdown.Item>Our Story</Dropdown.Item>
+              <Dropdown.Item>Get Involved</Dropdown.Item>
+              <Dropdown.Item>More</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
+
+          <Dropdown item text='Shop'>
+            <Dropdown.Menu>
+              <Dropdown.Item>Our Story</Dropdown.Item>
+              <Dropdown.Item>Get Involved</Dropdown.Item>
+              <Dropdown.Item>More</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
+        </Grid.Column>
+
+        <Grid.Column className='xyz' computer={5} floated='left' mobile={4}>
+          <Search />
+        </Grid.Column>
+        <Grid.Column computer={3} mobile={2} floated='right'>
+          <div>
+            <Icon name='instagram' size='big' />
+            <Icon name='facebook' size='big' />
+            <Icon name='twitter' size='big' />
+
+            <button>
+              <Badge color='error'>
+                <AddShoppingCartIcon />
+              </Badge>
+            </button>
+          </div>
         </Grid.Column>
       </Grid>
     </Main>
