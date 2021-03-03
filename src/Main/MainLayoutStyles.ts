@@ -1,41 +1,39 @@
 import styled from 'styled-components'
 
 export const Main = styled.div`
-  .ui.icon.input {
-    width 300px;
+  .LLLL {
+    border: 1px solid;
+    margin-top: 50px;
+    justify-content: center;
+    background-color: #94a2b3;
+    align-items: center !important;
   }
 
-  .search {
-      margin-left: 30px;
+  .placeholder {
+    margin-top: 50px;
   }
 
-  .xyz {
+  .text {
+    background-color: #e57059;
     padding: 20px;
-    background-color: black;
-    color: white;
   }
 
-  .about-us {
-    margin-right: 40px;
+  .ui.grid > .row > .column.image {
+    padding-left: 0;
+    padding-right: 0;
   }
 
-  
-  .about-us:hover {
-    background-color: lightgrey;
-    color: black;
+  .triple {
+    justify-content: center;
+    align-items: center !important;
   }
-  
-  .shop:hover {
-    background-color: lightgrey;
-    color: black;
-  }
-  
-
 
   @media only screen and (max-width: 600px) {
-    .ui.icon.input {
-      width 220px;
+    .ui.stackable.grid > .row > .column.image {
+      padding-bottom: 0 !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      padding-top: 20px;
     }
-  
-
+  }
 `

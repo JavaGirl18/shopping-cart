@@ -1,50 +1,66 @@
-import { Search, Grid, Icon, Menu, Dropdown } from 'semantic-ui-react'
+import {
+  Search,
+  Grid,
+  Header,
+  Button,
+  Image,
+  Placeholder,
+  PlaceholderLine,
+  PlaceholderImage,
+} from 'semantic-ui-react'
 import { Main } from './MainLayoutStyles'
-import { Link } from 'react-router-dom'
-
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart'
 import Badge from '@material-ui/core/Badge'
 
 const MainLayout = () => {
   return (
     <Main>
-      <Grid className='xyz'>
-        <Grid.Column computer={4} mobile={3} className='about-us-mobile1'>
-          <Menu stackable borderless compact color='black'>
-            <Dropdown item text='About Us' className='about-us' pointing='left'>
-              <Dropdown.Menu>
-                <Dropdown.Item>Our Story</Dropdown.Item>
-                <Dropdown.Item>Get Involved</Dropdown.Item>
-                <Dropdown.Item>More</Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
-
-            <Dropdown item text='Shop' className='shop' pointing='left'>
-              <Dropdown.Menu>
-                <Dropdown.Item>Our Story</Dropdown.Item>
-                <Dropdown.Item>Get Involved</Dropdown.Item>
-                <Dropdown.Item>More</Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
-          </Menu>
+      <Grid className='LLLL'>
+        {/* <Grid.Row>
+          <Header content='I AM Large Content' />
+        </Grid.Row> */}
+        <Grid.Column className='live' computer={3}>
+          Lifestyle
         </Grid.Column>
-
-        <Grid.Column computer={5} floated='left' mobile={4} className='search'>
-          <Search />
+        <Grid.Column className='laugh' computer={3}>
+          Events
         </Grid.Column>
-        <Grid.Column computer={3} mobile={2} floated='right'>
-          <div>
-            <Icon name='instagram' size='big' />
-            <Icon name='facebook' size='big' />
-            <Icon name='twitter' size='big' />
-
-            <button>
-              <Badge color='error'>
-                <AddShoppingCartIcon />
-              </Badge>
-            </button>
-          </div>
+        <Grid.Column className='learn' computer={3}>
+          Learn
         </Grid.Column>
+        <Grid.Column className='love' computer={3}>
+          Newsletter
+        </Grid.Column>
+      </Grid>
+
+      <Grid stackable>
+        <Grid.Row className='placeholder' columns={2}>
+          <Grid.Column className='image'>
+            <Image src='/quote.png' fluid />
+          </Grid.Column>
+          <Grid.Column className='text'>
+            <p>
+              Audiam quaerendum eu sea, pro omittam definiebas ex. Te est latine
+              definitiones. Quot wisi nulla ex duo. Vis sint solet expetenda ne,
+              his te phaedrum referrentur consectetuer. Id vix fabulas oporteat,
+              ei quo vide phaedrum, vim vivendum maiestatis in.
+            </p>
+          </Grid.Column>
+        </Grid.Row>
+      </Grid>
+
+      <Grid className='triple'>
+        <Grid.Row columns={3}>
+          <Grid.Column>
+            <Image src='/organized.png' fluid />
+          </Grid.Column>
+          <Grid.Column>
+            <Image src='/wealthy.png' fluid />
+          </Grid.Column>
+          <Grid.Column>
+            <Image src='/high.jpeg' fluid />
+          </Grid.Column>
+        </Grid.Row>
       </Grid>
     </Main>
   )
